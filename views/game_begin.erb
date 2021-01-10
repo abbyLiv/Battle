@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="<%= url("/styles.css") %>">
+  </head>
+  <body>
+    <div id="cont1" class="monster-container">
+      <img class="monster-image" src="/images/monster1.jpg" alt="">
+      <div class="outer-hp">
+        <div class="inner-hp">
+          <span><%= @player1HP %>/<%= @player1MaxHP %></span>
+        </div>
+      </div>
+      <h2><%= @player1 %>'s monster</h2>
+    </div>
+    <h1><%= @current_player %>'s turn</h1>
+    <div id="cont2" class="monster-container">
+      <img class="monster-image" src="/images/monster2.jpg" alt="">
+      <div class="outer-hp">
+        <div class="inner-hp">
+          <span><%= @player2HP %>/<%= @player2MaxHP %></span>
+        </div>
+      </div>
+      <h2><%= @player2 %>'s monster</h2>
+    </div>
+    <% if @current_player == @player1 %>
+      <div class="action-container">
+        <button type="button" name="button"><a href="/attack-confirmation">Attack</a></button>
+        <button type="button" name="button">Paralyse</button>
+        <button type="button" name="button">Sleep</button>
+        <button type="button" name="button">Poison</button>
+        <button type="button" name="button">Heal</button>
+      </div>
+    <% elsif @current_player == @player2 %>
+      <div class="action-container">
+        <button type="button" name="button"><a href="/attack-confirmation2">Attack</a></button>
+        <button type="button" name="button">Paralyse</button>
+        <button type="button" name="button">Sleep</button>
+        <button type="button" name="button">Poison</button>
+        <button type="button" name="button">Heal</button>
+      </div>
+    <% end %>
+  </body>
+</html>

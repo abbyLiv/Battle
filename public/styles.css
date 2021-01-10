@@ -1,0 +1,66 @@
+.monster-image {
+  width: 350px;
+  height: 350px;
+  border: 2px solid grey;
+}
+
+.monster-container {
+  position: absolute;
+  margin: 90px;
+}
+
+.action-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 100px;
+  margin-left: 90px;
+}
+
+#cont1 {
+  left: 0;
+  top: 0;
+}
+
+#cont2 {
+  right: 0;
+  top: 0;
+}
+
+button {
+  padding: 15px 10px 15px 10px;
+  background: none;
+  border: 1px solid black;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+.outer-hp, .inner-hp {
+  width: 200px;
+  height: 30px;
+}
+
+.outer-hp {
+  position: relative;
+  left: 22%;
+  background: gray;
+}
+
+.inner-hp {
+  background: #90EE90;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.inner-hp span {
+  display: inline-block;
+  position: relative;
+  font-size: 22px;
+  padding-top: 2.5px;
+}

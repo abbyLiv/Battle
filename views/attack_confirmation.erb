@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="<%= url("/styles.css") %>">
+  </head>
+  <body>
+    <h2>Are you sure you want to attack <%= @player %>'s monster?</h2>
+    <section>
+      <button class="button">
+        <a href="/player<%= @player_number.to_s %>-damage">Yes</a>
+      </button>
+      <button class="button">
+        <a href="/play">No</a>
+      </button>
+    </section>
+  </body>
+</html>
